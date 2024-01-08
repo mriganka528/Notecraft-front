@@ -1,234 +1,77 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+import React, { useState, useEffect } from 'react'
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import './Navbar.css'
+import logo_light from '../../assets/new_logo_light.jpg'
+import logo_black from '../../assets/new_logo_dark.jpg'
+import toggle_light from '../../assets/night.png'
+import toggle_dark from '../../assets/day.png'
 
-html {
-    overflow-x: hidden;
-}
-
-body {
-    overflow-x: hidden;
-}
-
-ul {
-    gap: 2rem;
-    list-style-type: none;
-}
-
-img {
-    cursor: pointer;
-}
-
-.header {
-    background: rgb(255, 255, 255);
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    backdrop-filter: blur(20px);
-    box-shadow: 2px 3px 35px;
-    height: 9rem;
-    padding: 2.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: all 0.3s linear, ;
-
-}
-
-.logo {
-    width: 16rem;
-    border-radius: 30px;
-    transition: transform 0.3s linear;
-}
-
-.navbar {
-    background: transparent;
-    list-style-type: none;
-}
-
-.navbar-list {
-    display: flex;
-    gap: 4.5rem;
-    margin-top: 1rem;
-    justify-content: center;
-    align-items: center;
-    list-style-type: none;
-}
-
-.navbar-links:link,
-.navbar-links:visited {
-    display: inline-block;
-    text-transform: capitalize;
-    text-decoration: none;
-    font-size: 2.5rem;
-    color: #000000;
-    transition: all 0.5s;
-}
-
-.button-84:hover {
-    color: #fff;
-}
-
-.mobile_mood {
-    display: none;
-}
-
-.mobile_auth_section {
-    display: none;
-}
-
-.navbar-links:hover {
-    transform: translateY(-20%) scale(1.1);
-}
-
-.end_items {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2.5rem;
-}
-
-.mobile_nav_btn {
-    display: none;
-    background-color: transparent;
-    cursor: pointer;
-    padding: .4rem;
-}
-
-.mobile_nav_btn .close_icon {
-    display: none;
-}
-
-@media (max-width:1355px) {
-    .navbar-list {
-        gap: 2rem;
+function Navbar(props) {
+    let location = useLocation();
+    useEffect(() => {
+    }, [location]);
+    let navigation = useNavigate();
+    const handleLogout = () => {
+        localStorage.removeItem('token');
+        props.showAlert(" Logout successfully", "success");
+        navigation('/login')
     }
-
-    .header .logo {
-        width: 13rem;
+    const { theme, toggle_theme } = props;
+    const [active, setActive] = useState(null);
+    const toggle_active = () => {
+        setActive((active === 'active') ? null : 'active');
+        document.body.style.overflowY = active === 'active' ? 'scroll' : 'hidden';
+        document.documentElement.style.overflowY = active === 'active' ? 'scroll' : 'hidden';
     }
-
-    .navbar-links:link,
-    .navbar-links:visited {
-
-        font-size: 2.3rem;
-
+    let handle_theme = () => {
+        toggle_theme();
     }
+    return (
+        <>
+            <header className={`header ${active} ${theme}`}>
+                <img className='logo' src={(theme === 'light') ? logo_light : logo_black} alt="logo" />
+                <nav className='navbar'>
+                    <ul className='navbar-list'>
+                        <li><Link className='navbar-links' to="/" onClick={toggle_active}>Home</Link></li>
+                        <li><Link className='navbar-links' to="/contact" onClick={toggle_active}>Contact</Link></li>
+
+                        <li >
+                            <div className="mobile_auth_section ">
+                                {(!localStorage.getItem('token')) ?
+
+                                    < form className="d-flex  justify-content-center align-items-center">
+                                        <Link className="button-84" to="/login" role="button" onClick={toggle_active}>Sign in</Link>
+                                        <Link className="button-84 ml-4" to="/signUp" role="button" onClick={toggle_active}>Sign Up</Link>
+                                    </form> : <button type="button" className="button-84" onClick={() => { handleLogout(); toggle_active() }}>Logout</button>
+
+                                }
+                            </div>
+                        </li>
+
+                        <li><img className='mobile_mood' onClick={() => { handle_theme() }} src={(theme === 'light') ? toggle_light : toggle_dark} alt="Loading" style={{ width: '4rem' }} /></li>
+                    </ul>
+                </nav>
+                <div className="end_items">
+                    <div className="auth_section">
+                        {(!localStorage.getItem('token')) ?
+
+                            < form className="d-flex justify-content-center  ">
+                                <Link className="button-84  mr-3 " to="/login" role="button">Sign in</Link>
+                                <Link className="button-84" to="/signUp" role="button">Sign Up</Link>
+                            </form> : <button type="button" className="button-84" onClick={handleLogout}>Logout</button>
+                        }
+                    </div>
+                    <div className="mood">
+                        <img src={(theme === 'light') ? toggle_light : toggle_dark} onClick={() => { handle_theme() }} alt="Loading" style={{ width: '4rem' }} />
+                    </div>
+                </div>
+                <div className="mobile_nav_btn">
+                    <i className=" open_icon fa-solid fa-2xl fa-bars-staggered" onClick={() => { toggle_active() }}></i>
+                    <i className=" close_icon fa-solid fa-2xl fa-xmark" onClick={() => { toggle_active() }} ></i>
+                </div>
+            </header>
+        </>
+    )
 }
 
-@media (max-width:1145px) {
-    .navbar-list {
-        gap: 1.5rem;
-    }
-
-    .header .logo {
-        width: 12rem;
-    }
-
-    .navbar-links:link,
-    .navbar-links:visited {
-
-        font-size: 1.8rem;
-
-    }
-}
-
-/*____________CSS for small devices__________ */
-
-@media (max-width:1060px) {
-
-    .mobile_nav_btn {
-        display: block;
-        z-index: 999;
-    }
-
-    .mobile_mood {
-        display: inline-block;
-    }
-
-    .mood {
-        display: none;
-    }
-
-    .mobile_auth_section {
-        display: inline-block;
-    }
-
-    .auth_section {
-        display: none;
-    }
-
-    .header .logo {
-        width: 10rem;
-    }
-
-    .header {
-        height: 6rem;
-        position: relative;
-    }
-
-    .navbar {
-        /* display: none; */
-        width: 100%;
-        height: 100vh;
-        background: rgba(255, 255, 255, 0.9);
-        backdrop-filter: blur(20px);
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transform: translateX(100%);
-        transition: all 0.4s linear;
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-    }
-
-    .navbar-list {
-        flex-direction: column;
-        align-items: center;
-        gap: 4rem;
-    }
-
-    .active .navbar {
-        transform: translateX(0);
-        opacity: 1;
-        visibility: visible;
-        pointer-events: auto;
-    }
-
-    .active .mobile_nav_btn .close_icon {
-
-        display: block;
-    }
-
-    .active .mobile_nav_btn .open_icon {
-
-        display: none;
-    }
-
-    .dark .navbar {
-        background: rgba(1, 1, 1, .9);
-    }
-
-}
-
-/*______________CSS For dark theme_______________*/
-
-.dark {
-    background-color: #010101;
-    box-shadow: none;
-    color: rgb(228, 224, 224);
-
-}
-
-.dark .navbar-links,
-.dark .mobile_nav_btn i {
-    color: rgb(236, 233, 233);
-
-}
+export default Navbar
