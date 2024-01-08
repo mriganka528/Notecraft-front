@@ -45,7 +45,7 @@ function SignUp(props) {
       <div className="form-group">
         <label htmlFor="email">Email address</label>
         <input type="email" className="form-control" id="email" name='email' aria-describedby="emailHelp" onChange={onChange} value={credentials.email} placeholder="Enter email" />
-        <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
+        <small id="emailHelp" style={{fontSize:'1.2rem'}} className="form-text text-muted">We'll never share your email with anyone else.</small>
       </div>
       <div className="form-group">
         <label htmlFor="password">Password</label>
