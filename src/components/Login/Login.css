@@ -13,6 +13,7 @@
 
 @media (max-width:600px) {
     .login_form {
+        margin-top: 4rem;
         padding-inline: 2rem;
     }
 }
