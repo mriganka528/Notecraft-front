@@ -28,7 +28,7 @@ function Navbar(props) {
     }
     return (
         <>
-            <header className={`header ${active} ${theme}`}>
+            <header className={`header fixed-top ${active} ${theme}`}>
                 <img className='logo' src={(theme === 'light') ? logo_light : logo_black} alt="logo" />
                 <nav className='navbar'>
                     <ul className='navbar-list'>
