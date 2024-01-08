@@ -165,6 +165,7 @@ img{
     }
 
     .header {
+        height: 7rem;
         position: relative;
     }
 
