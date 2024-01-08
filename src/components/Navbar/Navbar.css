@@ -78,8 +78,7 @@ img{
     display: none;
 }
 
-.navbar-links:hover,
-.navbar-links:active {
+.navbar-links:hover {
     transform: translateY(-20%) scale(1.1);
 }
 
