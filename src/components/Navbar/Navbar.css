@@ -47,7 +47,9 @@ img{
 
 .navbar {
     background: transparent;
-}
+    display: flex;
+    justify-content: center;
+    align-items: center}
 
 .navbar-list {
     display: flex;
