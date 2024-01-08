@@ -6,22 +6,21 @@
 
 html {
     overflow-x: hidden;
-
-
 }
 
 body {
     overflow-x: hidden;
-
 }
 
 ul {
     gap: 2rem;
     list-style-type: none;
 }
-img{
+
+img {
     cursor: pointer;
 }
+
 .header {
     background: rgb(255, 255, 255);
     position: sticky;
@@ -47,14 +46,15 @@ img{
 
 .navbar {
     background: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center}
+    list-style-type: none;
+}
 
 .navbar-list {
     display: flex;
-    margin-top: 1rem;
     gap: 4.5rem;
+    margin-top: 1rem;
+    justify-content: center;
+    align-items: center;
     list-style-type: none;
 }
 
@@ -67,10 +67,11 @@ img{
     color: #000000;
     transition: all 0.5s;
 }
-.button-84:hover
-{
+
+.button-84:hover {
     color: #fff;
 }
+
 .mobile_mood {
     display: none;
 }
@@ -137,7 +138,7 @@ img{
 
 /*____________CSS for small devices__________ */
 
-@media (max-width:965px) {
+@media (max-width:1060px) {
 
     .mobile_nav_btn {
         display: block;
@@ -212,7 +213,7 @@ img{
     }
 
     .dark .navbar {
-        background: rgba(1, 1, 1,.9);
+        background: rgba(1, 1, 1, .9);
     }
 
 }
