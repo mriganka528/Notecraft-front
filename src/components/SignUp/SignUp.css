@@ -1,0 +1,33 @@
+.signup_form
+{
+    background: transparent  !important;
+    margin-top: 15rem;
+}
+.signup_form div
+{
+    padding-block: .6rem;
+}
+.dark div input {
+    height: 4rem;
+}
+
+.dark div input {
+    background-color: rgb(0, 0, 0);
+    box-shadow: rgba(255, 255, 255, 0.15) 1.95px 1.95px 2.6px;
+    color: rgb(228, 224, 224);
+
+    &:focus {
+        background-color: #000000;
+        color: rgb(228, 224, 224);
+    }
+}
+@media (max-width:620px)
+{
+    .signup_form   {
+        margin-top: 8rem;
+        padding-inline: 2rem;
+    }
+    .signup_form div{
+        padding-block: .3rem;
+    }
+}

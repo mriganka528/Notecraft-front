@@ -1,0 +1,14 @@
+form div input {
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.dark form div input {
+    background-color: rgb(0, 0, 0);
+    box-shadow: rgba(255, 255, 255, 0.15) 1.95px 1.95px 2.6px;
+    color: rgb(228, 224, 224);
+
+    &:focus {
+        background-color: #000000;
+        color: rgb(228, 224, 224);
+    }
+}

@@ -1,0 +1,18 @@
+.login_form {
+    background: transparent !important;
+    margin-top: 15rem;
+}
+
+.login_form div {
+    padding-block: .6rem;
+}
+
+.login_form div input {
+    height: 4rem;
+}
+
+@media (max-width:600px) {
+    .login_form {
+        padding-inline: 2rem;
+    }
+}
