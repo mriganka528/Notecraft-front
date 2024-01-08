@@ -12,3 +12,10 @@ form div input {
         color: rgb(228, 224, 224);
     }
 }
+@media (max-width:965px)
+{
+      .cont
+      {
+        padding-inline: 1.4rem;
+      }
+}
