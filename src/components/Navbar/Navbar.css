@@ -53,6 +53,7 @@ img{
 
 .navbar-list {
     display: flex;
+    margin-top: 1rem;
     gap: 4.5rem;
     list-style-type: none;
 }
