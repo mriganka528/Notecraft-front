@@ -40,7 +40,7 @@ function Login(props) {
             <div className=" pass_div mb-3">
                 <label htmlFor="email" className="form-label">Email address</label>
                 <input type="email" className="pass_inp form-control" value={credentials.email} name='email' onChange={onChange} id="email" aria-describedby="emailHelp" placeholder="Enter email" />
-                <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
+                <small id="emailHelp" style={{fontSize:'1.2rem'}} className="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
             <div className="mb-3">
                 <label htmlFor="password" className="form-label">Password</label>
