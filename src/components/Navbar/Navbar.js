@@ -20,7 +20,9 @@ function Navbar(props) {
     const [active, setActive] = useState(null);
     const toggle_active = () => {
         setActive((active === 'active') ? null : 'active');
+        document.body.style.overflowY = active === 'active' ? 'scroll' : 'hidden';
         document.documentElement.style.overflowY = active === 'active' ? 'scroll' : 'hidden';
+        
     }
     let handle_theme = () => {
         toggle_theme();
