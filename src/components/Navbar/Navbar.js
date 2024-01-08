@@ -34,7 +34,7 @@ function Navbar(props) {
                 <nav className='navbar'>
                     <ul className='navbar-list'>
                         <li><Link className='navbar-links' to="/" onClick={toggle_active}>Home</Link></li>
-                        <li><Link className='navbar-links' to="/contact" onClick={toggle_active}>Contact us</Link></li>
+                        <li><Link className='navbar-links' to="/contact" onClick={toggle_active}>Contact</Link></li>
 
                         <li >
                             <div className="mobile_auth_section ">
