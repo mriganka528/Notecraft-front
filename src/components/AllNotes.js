@@ -46,7 +46,7 @@ const AllNotes = (props) => {
                 <div className="modal-dialog" style={{ fontSize: "20px" }}>
                     <div className="modal-content">
                         <div className="modal-header">
-                            <h2 className="modal-title fs-5" id="exampleModalLabel">Edit Note</h2>
+                            <h3 className="modal-title fs-5" id="exampleModalLabel">Edit Note</h3>
                             <i className="fa-solid fa-xmark fa-rotate-180 fa-lg" data-bs-dismiss="modal" aria-label="Close"></i>
                         </div>
                         <form className='my-2 px-3'>
