@@ -73,7 +73,7 @@ const AllNotes = (props) => {
 
 
             <div className='container  my-5'>
-                <h1 className='mt-4'>Your notes</h1>
+                <h2 className='mt-4'>Your notes</h2>
                 <p style={{ fontSize: '1.7rem', marginBlock: '2rem' }}>{notes.length === 0 && "No notes to display"}</p>
                 <div className=" d-flex  justify-content-start align-content-center flex-wrap my-3">
                     {notes.map((note) => {
