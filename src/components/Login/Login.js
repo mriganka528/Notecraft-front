@@ -33,7 +33,7 @@ function Login(props) {
         setCredentials({ ...credentials, [e.target.name]: e.target.value });
     }
     return (
-        <form className={`${styles.login_form} ${props.theme}`} onSubmit={handleSubmit} style={{ fontSize: "2rem" }}>
+        <form className={`login_form ${props.theme}`} onSubmit={handleSubmit} style={{ fontSize: "2rem" }}>
             <div className=" mb-4">
                 <h2>Sign in</h2>
             </div>
