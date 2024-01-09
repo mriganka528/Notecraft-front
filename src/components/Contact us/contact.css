@@ -85,7 +85,7 @@ form {
          font-size: 1.5rem;
         &.thick {
             height: 3.3rem;
-            padding: .5rem 3.5rem;
+            padding: .5rem 2rem;
         }
 
         &:focus {
@@ -93,11 +93,6 @@ form {
             border: none;
             box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.11);
         }
-    }
-
-    .form-control {
-        padding-block: .5rem;
-        padding-left: 3.2rem;
     }
 
     ::placeholder {
