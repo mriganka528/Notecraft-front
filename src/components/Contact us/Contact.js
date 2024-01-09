@@ -303,7 +303,7 @@ const Contact = (props) => {
 
                 <div className='mobi'>
 
-                    <form >
+                    <form className={`${props.theme}`}  >
                         <h1 className="title text-center mb-4">Talk to Us</h1>
 
                         <div className="form-group position-relative">
