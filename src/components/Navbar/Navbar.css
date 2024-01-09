@@ -203,7 +203,7 @@ img {
         justify-content: center;
         align-items: center;
         transform: translateX(100%);
-        transition: all 0.4s linear;
+        transition: all 0.4s ;
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
