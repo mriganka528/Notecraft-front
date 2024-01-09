@@ -53,7 +53,7 @@ function SignUp(props) {
       </div>
       <div className="form-group"  style= {{ fontSize: "1.65rem" }}>
         <label htmlFor="conf_password">Confirm Password</label>
-        <input type="password" className="form-control" style={{ fontSize: "1.3rem" }} id="conf_password" name='conf_password' value={credentials.password} onChange={onChange} placeholder="Renter password" />
+        <input type="password" className="form-control" style={{ fontSize: "1.3rem" }} id="conf_password" name='conf_password' value={credentials.password} onChange={onChange} placeholder="Re-enter password" />
       </div>
       <button type="submit" className="button-84 btn-lg my-3">Sign Up</button>
     </form>
