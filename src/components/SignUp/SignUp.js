@@ -34,26 +34,26 @@ function SignUp(props) {
   }
   return (
 
-    <form className={` signup_form ${props.theme}`} onSubmit={handleSubmit} style={{ fontSize: "2rem" }} >
+    <form className={` signup_form ${props.theme}`} onSubmit={handleSubmit} style={{ fontSize: "1.8rem" }} >
       <div className=" mb-4">
-        <h1>Sign up</h1>
+        <h2>Sign up</h2>
       </div>
       <div className="form-group ">
         <label htmlFor="name">Name</label>
-        <input type="text" className="form-control" id="name" name='name' onChange={onChange} value={credentials.name} aria-describedby="emailHelp" placeholder="Enter name" />
+        <input type="text" className="form-control"   style={{ fontSize: "1.3rem" }} id="name" name='name' onChange={onChange} value={credentials.name} aria-describedby="emailHelp" placeholder="Enter name" />
       </div>
       <div className="form-group">
         <label htmlFor="email">Email address</label>
-        <input type="email" className="form-control" id="email" name='email' aria-describedby="emailHelp" onChange={onChange} value={credentials.email} placeholder="Enter email" />
-        <small id="emailHelp" style={{fontSize:'1.2rem'}} className="form-text text-muted">We'll never share your email with anyone else.</small>
+        <input type="email" className="form-control" style={{ fontSize: "1.3rem" }} id="email" name='email' aria-describedby="emailHelp" onChange={onChange} value={credentials.email} placeholder="Enter email" />
+        <small id="emailHelp" style={{fontSize:'1.1rem'}} className="form-text text-muted">We'll never share your email with anyone else.</small>
       </div>
       <div className="form-group">
         <label htmlFor="password">Password</label>
-        <input type="password" className="form-control" id="password" name='password' value={credentials.password} onChange={onChange} placeholder="Password" />
+        <input type="password" className="form-control" style={{ fontSize: "1.3rem" }} id="password" name='password' value={credentials.password} onChange={onChange} placeholder="Password" />
       </div>
       <div className="form-group">
         <label htmlFor="conf_password">Confirm Password</label>
-        <input type="password" className="form-control" id="conf_password" name='conf_password' value={credentials.password} onChange={onChange} placeholder="Renter password" />
+        <input type="password" className="form-control" style={{ fontSize: "1.3rem" }} id="conf_password" name='conf_password' value={credentials.password} onChange={onChange} placeholder="Renter password" />
       </div>
       <button type="submit" className="button-84 btn-lg my-3">Sign Up</button>
     </form>
