@@ -52,11 +52,15 @@ img {
 
 .navbar-list {
     display: flex;
-    gap: 4.5rem;
+    gap: 0rem;
     margin-top: 1rem;
     justify-content: center;
     align-items: center;
     list-style-type: none;
+}
+
+.navbar-links {
+    margin-inline: 2rem;
 }
 
 .navbar-links:link,
@@ -89,7 +93,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2.5rem;
+    gap: 0rem;
 }
 
 .mobile_nav_btn {
@@ -105,7 +109,11 @@ img {
 
 @media (max-width:1355px) {
     .navbar-list {
-        gap: 2rem;
+        gap: 0rem
+    }
+
+    .navbar-links {
+        margin-inline: 1rem;
     }
 
     .header .logo {
@@ -121,9 +129,18 @@ img {
 }
 
 @media (max-width:1145px) {
-    .navbar-list {
-        gap: 1.5rem;
+    .header
+    {
+        padding-inline: 3rem;
     }
+    .navbar-list {
+        gap: 0rem
+    }
+
+    .navbar-links {
+        margin-inline: 1rem;
+    }
+
 
     .header .logo {
         width: 12rem;
@@ -139,7 +156,7 @@ img {
 
 /*____________CSS for small devices__________ */
 
-@media (max-width:870px) {
+@media (max-width:1030px) {
 
     .mobile_nav_btn {
         display: block;
