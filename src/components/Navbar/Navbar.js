@@ -61,7 +61,7 @@ function Navbar(props) {
                             </form> : <button type="button" className="button-84" onClick={handleLogout}>Logout</button>
                         }
                     </div>
-                    <div className="mood">
+                    <div className="mood ml-3">
                         <img src={(theme === 'light') ? toggle_light : toggle_dark} onClick={() => { handle_theme() }} alt="Loading" style={{ width: '4rem' }} />
                     </div>
                 </div>
