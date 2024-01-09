@@ -321,7 +321,7 @@ const Contact = (props) => {
                         </div>
 
                         <div className="form-group message">
-                            <textarea id="formMessage" className="form-control form-control-lg" rows="7" placeholder="Mensagem"></textarea>
+                            <textarea id="formMessage" className="form-control form-control-lg" rows="7" placeholder="Message"></textarea>
                         </div>
 
                         <div className="text-center">
