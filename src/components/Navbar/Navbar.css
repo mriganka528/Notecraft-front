@@ -29,7 +29,7 @@ img {
     z-index: 1000;
     backdrop-filter: blur(20px);
     box-shadow: 2px 3px 35px;
-    height: 9rem;
+    height: 7rem;
     padding: 2.5rem;
     display: flex;
     justify-content: space-between;
@@ -39,7 +39,8 @@ img {
 }
 
 .logo {
-    width: 16rem;
+    width: 15rem;
+    height: 7rem;
     border-radius: 30px;
     transition: transform 0.3s linear;
 }
@@ -163,6 +164,7 @@ img {
 
     .header .logo {
         width: 10rem;
+        height: 5rem;
     }
 
     .header {
