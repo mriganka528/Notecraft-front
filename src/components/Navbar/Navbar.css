@@ -185,6 +185,7 @@ img {
     }
 
     .header {
+        padding:1rem;
         height: 6rem;
         position: relative;
     }
