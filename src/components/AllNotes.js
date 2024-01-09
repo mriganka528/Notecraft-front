@@ -42,7 +42,7 @@ const AllNotes = (props) => {
             </button>
 
             {/* Modal  */}
-            <div className="modal fade" id="exampleModal" style={{ fontSize: '20px', transition: '.6s' }} tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div className="modal fade" id="exampleModal" style={{ fontSize: '15px', transition: '.6s' }} tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div className="modal-dialog" style={{ fontSize: "20px" }}>
                     <div className="modal-content">
                         <div className="modal-header">
