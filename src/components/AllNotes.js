@@ -44,7 +44,7 @@ const AllNotes = (props) => {
             {/* Modal  */}
             <div className="modal fade" id="exampleModal" style={{ fontSize: '15px', transition: '.6s' }} tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div className="modal-dialog" style={{ fontSize: "20px" }}>
-                    <div className="modal-content">
+                    <div className={`modal-content bg ${(props.theme === 'dark') && 'bg-dark'}`}>
                         <div className="modal-header">
                             <h3 className="modal-title fs-5" id="exampleModalLabel">Edit Note</h3>
                             <i className="fa-solid fa-xmark fa-rotate-180 fa-lg" data-bs-dismiss="modal" aria-label="Close"></i>
