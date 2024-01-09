@@ -69,7 +69,6 @@ svg {
 }
 
 form {
-    background: transparent;
     min-width: 25rem;
 
     .title {
