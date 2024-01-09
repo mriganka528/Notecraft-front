@@ -301,7 +301,7 @@ const Contact = (props) => {
                     </g>
                 </svg>
 
-                <div className={`mobi ${props.theme}`}>
+                <div className='mobi'>
 
                     <form >
                         <h1 className="title text-center mb-4">Talk to Us</h1>
