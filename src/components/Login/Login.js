@@ -35,7 +35,7 @@ function Login(props) {
     return (
         <form className={`login_form ${props.theme}`} onSubmit={handleSubmit} style={{ fontSize: "2rem" }}>
             <div className=" mb-4">
-                <h1>Sign in</h1>
+                <h2>Sign in</h2>
             </div>
             <div className=" pass_div mb-3">
                 <label htmlFor="email" className="form-label">Email address</label>
