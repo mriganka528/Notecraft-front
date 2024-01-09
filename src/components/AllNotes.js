@@ -52,15 +52,15 @@ const AllNotes = (props) => {
                         <form className='my-2 px-3'>
                             <div className="mb-3">
                                 <label htmlFor="etitle" className="form-label">Title</label>
-                                <input type="text" className="form-control " value={note.etitle} id='title' onChange={onChange} name='etitle' aria-describedby="emailHelp" />
+                                <input type="text" className="form-control " style={{ fontSize: "1.3rem" }} value={note.etitle} id='title' onChange={onChange} name='etitle' aria-describedby="emailHelp" />
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="edescription" className="form-label" >Description</label>
-                                <input type="text" className="form-control" value={note.edescription} id='edescription' onChange={onChange} name='edescription' />
+                                <input type="text" className="form-control" style={{ fontSize: "1.3rem" }} value={note.edescription} id='edescription' onChange={onChange} name='edescription' />
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="etag" className="form-label" >Tag</label>
-                                <input type="text" className="form-control" value={note.etag} id='etag' onChange={onChange} name='etag' />
+                                <input type="text" className="form-control" style={{ fontSize: "1.3rem" }} value={note.etag} id='etag' onChange={onChange} name='etag' />
                             </div>
                         </form>
                         <div className="modal-footer">
