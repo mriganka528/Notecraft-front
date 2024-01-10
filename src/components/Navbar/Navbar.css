@@ -202,8 +202,10 @@ img {
         display: flex;
         justify-content: center;
         align-items: center;
+        border-top-left-radius:40%;
+        border-bottom-left-radius:40%;
         transform: translateX(100%);
-        transition: all 0.4s ;
+        transition: all 0.4s ease-in;
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
@@ -216,6 +218,8 @@ img {
     }
 
     .active .navbar {
+        border-top-left-radius:0%;
+        border-bottom-left-radius:0%;
         transform: translateX(0);
         opacity: 1;
         visibility: visible;
