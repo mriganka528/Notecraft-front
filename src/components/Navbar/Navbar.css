@@ -205,7 +205,7 @@ img {
         border-top-left-radius:40%;
         border-bottom-left-radius:40%;
         transform: translateX(100%);
-        transition: all 0.4s ease-in;
+        transition: all 0.4s ease;
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
